@@ -156,7 +156,11 @@ public class SideMenuItem : HeaderedSimpleItemsControl, ISelectable, ICommandSou
         }
     }
 
-    internal void SwitchPanelArea(bool isShow)
+    /// <summary>
+    /// 考虑到与TabControl联动，所以internal改成public
+    /// </summary>
+    /// <param name="isShow"></param>
+    public void SwitchPanelArea(bool isShow)
     {
         if (ItemsHost == null) return;
         if (Role == SideMenuItemRole.Header)
